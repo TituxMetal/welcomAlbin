@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+
+$xSmall: 22.5em;
+$small: 40em;
+$medium: 50em;
+$desktop: 61.25em;
+$large: 80em;
+
+$headBg: #0091ea;
+$contentBg: #0064b7;
+$txtColor: #e1f5fe;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Architects Daughter', cursive;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 3px solid $txtColor;
+	border-radius: 6px;
+	box-shadow: 0px 0px 2em 0px rgba(0, 0, 0, .4);
+	display: block;
+	max-height: 50vmax;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.content {
+	align-items: flex-start;
+	background-color: $contentBg;
+	color: $txtColor;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 0;
+	min-height: 100vh;
+	width: 100%;
+
+	h1 {
+		background-color: $headBg;
+		font-size: 2.4em;
+		margin: 0 auto;
+		padding: 6vh 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	.description {
+		align-self: center;
+		font-size: 1.8em;
+		padding: 4vh 1em;
+		text-align: justify;
+		width: auto;
+
+		p {
+			font-size: 1em;
+			line-height: 1.8;
+			margin: .5em auto;
+		}
+	}
+	figure {
+		align-self: flex-end;
+		margin: 0 auto;
+		padding: 6vw;
+		width: 100%;
+	}
+}
+
+footer {
+	align-items: center;
+	background-color: $headBg;
+	color: $txtColor;
+	display: flex;
+	font-size: 1.4em;
+	flex-flow: column wrap;
+	justify-content: center;
+	line-height: 1.6;
+	padding: 2em;
+
+	a {
+		display: block;
+		color: inherit;
+		font-weight: bold;
+		margin: 0 auto;
+		text-decoration: none;
+	}
+}
+
+@media screen and (min-width: $small) {
+
+	img {
+		max-height: 100vh;
+	}
+
+}
+
+@media screen and (min-width: $medium) {
+
+	.content {
+
+		.description {
+			font-size: 2.4em;
+			width: 80vw;
+		}
+
+		figure {
+			padding: 4vh 2vw;
+			width: 80vw;
+		}
+	}
+}
+
+@media screen and (min-width: $desktop) {
+
+	img {
+		max-height: 70vmax;
+	}
+
+}
+
+@media screen and (min-width: $large) {
+
+	img {
+		max-height: 100vh;
+	}
+
+	.content {
+
+		h1 {
+			font-size: 3.6em;
+			padding: 6vh 0;
+		}
+
+		.description {
+			align-self: center;
+			font-size: 2.5em;
+			padding: 2em;
+			width: 40vw;
+		}
+
+		figure {
+			align-self: center;
+			width: 58vw;
+			padding: 2em;
+		}
+	}
+}
